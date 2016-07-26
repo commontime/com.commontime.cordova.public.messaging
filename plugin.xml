@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+  id="com.commontime.cordova.public.messaging"
+  version="0.0.28">
+
+  <name>CommonTime Infinity Messaging</name>
+  <description>CommonTime Infinity public messaging plugin.</description>
+
+  <engines>
+    <engine name="cordova" version=">=4.1.1"/>
+  </engines>
+
+  <dependency id="cordova-plugin-file"/>
+
+  <js-module src="www/notify.js" name="Notifications">
+    <clobbers target="plugins.notify" />
+  </js-module>
+
+  <js-module src="www/asb.js" name="ASB">
+    <clobbers target="plugins.asb" />
+  </js-module>
+
+  <js-module src="www/rest.js" name="REST">
+    <clobbers target="plugins.rest" />
+  </js-module>
+
+  <js-module src="www/zumo.js" name="ZUMO">
+    <clobbers target="plugins.zumo" />
+  </js-module>
+
+  <js-module src="www/settings.js" name="Settings">
+    <clobbers target="plugins.settings" />
+  </js-module>
+
+  <js-module src="www/log.js" name="Log">
+    <clobbers target="plugins.log" />
+  </js-module>
+
+  <platform name="ios">
+
+    <config-file target="config.xml" parent="/*">
+      <feature name="ASB">
+        <param name="onload" value="true" />
+        <param name="ios-package" value="CTNAzureNotificationPlugin"/>
+      </feature>
+	    <feature name="REST">
+        <param name="onload" value="true" />
+        <param name="ios-package" value="CTNRestNotificationPlugin"/>
+      </feature>
+      <feature name="ZUMO">
+        <param name="onload" value="true" />
+        <param name="ios-package" value="CTNZumoNotificationPlugin"/>
+      </feature>
+      <feature name="Log">
+        <param name="onload" value="true" />
+        <param name="ios-package" value="CTLogPlugin"/>
+      </feature>
+      <feature name="Notify">
+        <param name="onload" value="true" />
+        <param name="ios-package" value="CTNNotificationPlugin" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/ios/libmessaging.a" framework="true"/>
+
+    <source-file src="src/ios/libZipArchive-ios.a" framework="true"/>
+    <framework src="src/ios/MicrosoftAzureMobile.framework" custom="true" embed="false"/>
+
+    <framework src="libsqlite3.tbd" />
+    <framework src="libz.dylib" />
+
+    <framework src="WebKit.framework"/>
+    <framework src="CoreData.framework"/>
+  </platform>
+
+</plugin>
