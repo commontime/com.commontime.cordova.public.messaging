@@ -73,4 +73,65 @@
     <framework src="CoreData.framework"/>
   </platform>
 
+  <platform name="android">    
+
+    <framework src="src/android/gradle/messaging.gradle" custom="true" type="gradleReference" /> 
+	<resource-file src="aar/messaging.aar" target="aar/messaging.aar" />	
+    
+    <framework src="commons-codec:commons-codec:1.9" />
+    <framework src="commons-io:commons-io:2.4" />
+    <framework src="com.android.support:support-v4:21.0.3" />
+	<framework src="de.mindpipe.android:android-logging-log4j:1.0.3" />
+    <framework src="log4j:log4j:1.2.17-atlassian-1" />
+    <framework src="com.microsoft.azure:azure-mobile-android:3.1.0" />
+    <framework src="com.squareup.okhttp3:okhttp:3.3.1" />
+    <framework src="com.microsoft.azure.android:azure-storage-android:0.7.0@aar" />
+
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+      <uses-permission android:name="android.permission.VIBRATE" />
+      <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <service android:name="com.commontime.mdesign.plugins.notificationsbase.NotificationsService" />
+      <receiver android:name="com.commontime.mdesign.plugins.notificationsbase.SingleCheckReceiver" android:exported="false" />
+      <receiver android:exported="false" android:name="com.commontime.mdesign.plugins.notificationsbase.ConnectivityReceiver">
+		<intent-filter>
+			<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+		</intent-filter>
+      </receiver>
+
+    </config-file>
+
+    <config-file target="res/xml/config.xml" parent="/*">
+	  <feature name="ZUMO">
+        <param name="onload" value="true" />
+        <param name="android-package" value="com.commontime.mdesign.plugins.appservices.ZumoPlugin"/>
+      </feature>
+	  <feature name="REST">
+        <param name="onload" value="true" />
+        <param name="android-package" value="com.commontime.mdesign.plugins.rest.RestPlugin"/>
+      </feature>
+      <feature name="ASB">
+        <param name="onload" value="true" />
+        <param name="android-package" value="com.commontime.mdesign.plugins.asb.ASBPlugin"/>
+      </feature>
+      <feature name="Settings">
+        <param name="onload" value="true" />
+        <param name="android-package" value="com.commontime.mdesign.plugins.base.Settings"/>
+      </feature>
+      <feature name="Log">
+        <param name="android-package" value="com.commontime.mdesign.plugins.base.Log"/>
+      </feature>
+      <feature name="Notify">
+        <param name="onload" value="true" />
+        <param name="android-package" value="com.commontime.mdesign.plugins.notificationsbase.Notify" />
+      </feature>
+    </config-file>
+    
+  </platform>
+
+
 </plugin>
