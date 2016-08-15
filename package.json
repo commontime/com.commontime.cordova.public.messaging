@@ -1,8 +1,8 @@
 
 {
-  "name": "@commontimeltd/com.commontime.cordova.publiuc.messaging",
+  "name": "com.commontime.cordova.publiuc.messaging",
   "version": "0.0.30",
-  "description": "These are the Messaging plugins ported from MD8.",
+  "description": "Messaging plugins.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
