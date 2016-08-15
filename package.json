@@ -1,0 +1,21 @@
+
+{
+  "name": "@commontimeltd/com.commontime.cordova.publiuc.messaging",
+  "version": "0.0.30",
+  "description": "These are the Messaging plugins ported from MD8.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/commontime/com.commontime.cordova.public.messaging.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/commontime/com.commontime.cordova.public.messaging/issues"
+  },
+  "homepage": "https://github.com/commontime/com.commontime.cordova.public.messaging#readme"
+}
