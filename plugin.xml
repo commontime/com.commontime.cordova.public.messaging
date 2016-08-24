@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
   id="com.commontime.cordova.public.messaging"
-  version="0.0.33">
+  version="0.0.34">
 
   <name>CommonTime Infinity Messaging</name>
   <description>CommonTime Infinity public messaging plugin.</description>
@@ -73,11 +73,11 @@
     <framework src="CoreData.framework"/>
   </platform>
 
-  <platform name="android">    
+  <platform name="android">
 
-    <framework src="src/android/gradle/messaging.gradle" custom="true" type="gradleReference" /> 
-	<resource-file src="aar/messaging.aar" target="aar/messaging.aar" />	
-    
+    <framework src="src/android/gradle/messaging.gradle" custom="true" type="gradleReference" />
+	<resource-file src="aar/messaging.aar" target="aar/messaging.aar" />
+
     <framework src="commons-codec:commons-codec:1.9" />
     <framework src="commons-io:commons-io:2.4" />
     <framework src="com.android.support:support-v4:21.0.3" />
@@ -130,7 +130,7 @@
         <param name="android-package" value="com.commontime.mdesign.plugins.notificationsbase.Notify" />
       </feature>
     </config-file>
-    
+
   </platform>
 
 
