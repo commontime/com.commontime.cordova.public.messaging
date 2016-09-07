@@ -6,6 +6,9 @@ module.exports = {
   },
   logout: function (successCallback, errorCallback) {
     cordova.exec(successCallback, errorCallback, "ZUMO", "logout", []);
+  },
+  setAuthenticationOptions: function (successCallback, errorCallback, options) {
+    cordova.exec(successCallback, errorCallback, "ZUMO", "setAuthenticationOptions", [options]);
   }
 }
 ;
