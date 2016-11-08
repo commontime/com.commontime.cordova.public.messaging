@@ -64,7 +64,7 @@
     <source-file src="src/ios/libmessaging.a" framework="true"/>
 
     <source-file src="src/ios/libZipArchive-ios.a" framework="true"/>
-    <framework src="src/ios/MicrosoftAzureMobile.framework" custom="true" embed="false"/>
+    <source-file src="src/ios/MicrosoftAzureMobile.framework" framework="true"/>
 
     <framework src="libsqlite3.tbd" />
     <framework src="libz.dylib" />
