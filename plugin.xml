@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
   id="com.commontime.cordova.public.messaging"
-  version="0.0.40">
+  version="0.0.41">
 
   <name>CommonTime Infinity Messaging</name>
   <description>CommonTime Infinity public messaging plugin.</description>
@@ -62,13 +62,12 @@
     </config-file>
 
     <source-file src="src/ios/libmessaging.a" framework="true"/>
-
     <source-file src="src/ios/libZipArchive-ios.a" framework="true"/>
-    <source-file src="src/ios/MicrosoftAzureMobile.framework" framework="true"/>
 
     <framework src="libsqlite3.tbd" />
     <framework src="libz.dylib" />
 
+    <framework src="src/ios/MicrosoftAzureMobile.framework" custom="true" embed="false"/>
     <framework src="WebKit.framework"/>
     <framework src="CoreData.framework"/>
   </platform>
