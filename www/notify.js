@@ -5,7 +5,7 @@ exec = require('cordova/exec');
 if (logmessage === undefined) {
 		var logmessage = function (msg) {
       if (console) {
-        console.warn(msg);
+        // console.warn(msg);
       }
     };
 }
