@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
   id="com.commontime.cordova.public.messaging"
-  version="0.0.44">
+  version="0.0.45">
 
   <name>CommonTime Infinity Messaging</name>
   <description>CommonTime Infinity public messaging plugin.</description>
@@ -10,7 +10,7 @@
     <engine name="cordova" version=">=4.1.1"/>
   </engines>
 
-  <dependency id="cordova-plugin-file"/>
+  <dependency id="cordova-plugin-file" version="^4.0.0"/>
 
   <js-module src="www/notify.js" name="Notifications">
     <clobbers target="plugins.notify" />
