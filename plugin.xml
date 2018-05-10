@@ -78,7 +78,7 @@
 	<resource-file src="aar/messaging.aar" target="aar/messaging.aar" />
 
     <framework src="commons-codec:commons-codec:1.9" />
-    <framework src="commons-io:commons-io:2.4" />
+    <framework src="commons-io:commons-io:2.6" />
     <framework src="com.android.support:support-v4:21.0.3" />
 	<framework src="de.mindpipe.android:android-logging-log4j:1.0.3" />
     <framework src="log4j:log4j:1.2.17-atlassian-1" />
