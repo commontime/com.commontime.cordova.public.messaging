@@ -1,7 +1,7 @@
 
 {
   "name": "com.commontime.cordova.public.messaging",
-  "version": "0.0.47",
+  "version": "0.0.48",
   "description": "Messaging plugins.",
   "main": "index.js",
   "scripts": {
