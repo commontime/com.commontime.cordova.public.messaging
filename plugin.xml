@@ -78,7 +78,7 @@
 	<resource-file src="aar/messaging.aar" target="aar/messaging.aar" />
 
     
-    <framework src="commons-io:commons-io:2.4" />    
+    <framework src="commons-io:commons-io:2.5" />    
     
 
     <config-file target="AndroidManifest.xml" parent="/manifest">
