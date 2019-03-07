@@ -75,7 +75,7 @@
   <platform name="android">
 
     <framework src="src/android/gradle/messaging.gradle" custom="true" type="gradleReference" />
-	<resource-file src="aar/messaging.aar" target="app/aar/messaging.aar" />
+	<resource-file src="aar/messaging.aar" target="app/src/main/app/aar/messaging.aar" />
     
     <framework src="commons-codec:commons-codec:1.9" />
     <framework src="commons-io:commons-io:2.4" />
